@@ -67,9 +67,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <footer id="myFooter">
     <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>Contact support: 
-      888-456-HELP,  
-      help@hrsupport.com</h4>
+      <h3>Contact Us</h3> 
+      <h4>Phone: 888-456-HELP</h4>
+      <h4>Email: support@hrsystem.com</h4>
     </div>
   </footer>
 
