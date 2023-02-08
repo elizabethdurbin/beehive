@@ -28,9 +28,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-theme-l1">Home</a>
     <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Employee</a>
-	<a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Search Employees</a>
 	
-
+	<form class="example" action="example.jsp">
+  		<input type="text" placeholder="Search.." name="search">
+  		<button type="submit"><i class="fa fa-search"></i></button>
+	</form>
+	
   </div>
 </div>
 
@@ -40,10 +43,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <i class="fa fa-remove"></i>
   </a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">View Profile</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Edit Profile</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Edit Compensation</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">View Compensation</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Add Employee</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Employee Profile</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Compensation</a>
+  
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
