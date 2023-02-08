@@ -28,6 +28,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-theme-l1">Home</a>
     <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Employee</a>
+	<a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Search Employees</a>
+	
 
   </div>
 </div>
@@ -38,10 +40,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <i class="fa fa-remove"></i>
   </a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">View Profile</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Edit Profile</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Edit Compensation</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">View Compensation</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -52,7 +54,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
+      <h1 class="w3-text-teal">Welcome to the HR System</h1>
       <p> Content Here</p>
     </div>
     <div class="w3-third w3-container">
@@ -62,7 +64,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <footer id="myFooter">
     <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>Footer</h4>
+      <h4>Contact support: 
+      888-456-HELP,  
+      help@hrsupport.com</h4>
     </div>
   </footer>
 
