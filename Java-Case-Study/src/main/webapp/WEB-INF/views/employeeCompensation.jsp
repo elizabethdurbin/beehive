@@ -43,13 +43,30 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 		<div class="w3-twothird w3-container">
 			<h1>Add Compensation</h1>
 			<form action="<%= request.getContextPath() %>/compensation" method="post">
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="type"></p>
+		      <p>
+		      Select a Type:&nbsp;
+		      <select name="category">
+       			 <c:forEach items="${listCategory}" var="category">
+            		<option value="${category.id}"
+   		 				<c:if test="${category.id eq selectedCatId}">selected="selected"</c:if>
+   						>
+    					${category.name}
+					</option>
+        		 </c:forEach>
+   			  </select>
+		      </p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="amount"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="description"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="date"></p>
 		    
 		      <p><button class="w3-button w3-light-grey w3-section" type="submit">Submit</button></p>
 		    </form>
+		    <select name="category">
+    			<option value="category_id">type</option>
+   	 			<option value="category_id">amount</option>
+    			<option value="category_id">description</option>
+				<option value="category_id">date</option>
+			</select>
 	    </div>
     </div>
 </body>
