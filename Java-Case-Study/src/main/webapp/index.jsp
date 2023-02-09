@@ -46,9 +46,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
  
   
   <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Employee</a>
+  <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-black">Add Employee</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Employee Profile</a>
-  <a href="compensation" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Compensation</a>
+  <a href="compensation" class="w3-bar-item w3-button w3-hide-small w3-hover-black">Compensation</a>
   
  
 </nav>
