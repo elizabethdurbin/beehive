@@ -27,7 +27,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-bar-item w3-theme-l1">HR System</div>
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-theme-l1">Home</a>
-    <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Employee</a>
+    
   	
   	<form class="example" action="example.jsp">
   		<input type="text" placeholder="Search.." name="search">
@@ -46,6 +46,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
  
   
   <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Employee</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Employee Profile</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Compensation</a>
   
