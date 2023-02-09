@@ -30,7 +30,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 	    <div class="w3-bar-item w3-theme-l1">HR System</div>
 	    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 	    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Home</a>
-	    <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Employee</a>
 		
 		<form class="example" action="example.jsp">
   			<input type="text" placeholder="Search.." name="search">
@@ -43,7 +42,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 	<div class="w3-main">
 		<div class="w3-twothird w3-container">
 			<h1>Add Compensation</h1>
-			<form action="<%= request.getContextPath() %>/register" method="post">
+			<form action="<%= request.getContextPath() %>/compensation" method="post">
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="type"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="amount"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="description"></p>
