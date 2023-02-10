@@ -7,10 +7,6 @@ public class Employee {
 	private String lastName;
 	private String birthday;
 	private String position;
-	private String type;
-	private String amount;
-	private String description;
-	private String date;
 	
 	public int getId() {
 		return id;
@@ -47,52 +43,5 @@ public class Employee {
 	}
 	public void setPosition(String position) {
 		this.position = position;
-	}
-	
-	//compensation code//
-	public class Category {
-	    private int id;
-	    private String name;
-	    public Category(int id, String name) {
-	        super();
-	        this.id = id;
-	        this.name = name;
-	    }
-	    public int getId() {
-	        return id;
-	    }
-	    public void setId(int id) {
-	        this.id = id;
-	    }
-	    public String getName() {
-	        return name;
-	    }
-	    public void setName(String name) {
-	        this.name = name;
-	    }
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public String getAmount() {
-		return amount;
-	}
-	public void setAmount(String amount) {
-		this.amount = amount;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public String getDate() {
-		return date;
-	}
-	public void setDate(String date) {
-		this.date = date;
 	}
 }

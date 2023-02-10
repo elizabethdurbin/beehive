@@ -43,10 +43,6 @@ public class EmployeeServlet extends HttpServlet {
 		String lastName = request.getParameter("lastName");
 		String birthday = request.getParameter("birthday");
 		String position = request.getParameter("position");
-		String type = request.getParameter("type");
-		String amount = request.getParameter("amount");
-		String description = request.getParameter("description");
-		String date = request.getParameter("date");
 		
 		
 		Employee Employee = new Employee();
@@ -55,10 +51,6 @@ public class EmployeeServlet extends HttpServlet {
 		Employee.setLastName(lastName);
 		Employee.setBirthday(birthday);
 		Employee.setPosition(position);
-		Employee.setType(type);
-		Employee.setAmount(amount);
-		Employee.setDescription(description);
-		Employee.setDate(date);
 		
 		try {
 			employeeDao.registerEmployee(Employee);
