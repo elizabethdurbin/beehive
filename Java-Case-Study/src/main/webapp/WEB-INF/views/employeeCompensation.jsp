@@ -43,7 +43,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 		<div class="w3-twothird w3-container">
 			<h1>Add Compensation</h1>
 			<form action="<%= request.getContextPath() %>/compensation" method="post">
-		     <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="amount"></p>
+		     <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="type"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="amount"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="description"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="date"></p>
