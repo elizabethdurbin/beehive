@@ -10,23 +10,22 @@ public class EmployeeDao {
 	
 	public int registerEmployee(Employee employee) throws ClassNotFoundException {
 		String INSERT_USERS_SQL = "INSERT INTO employee" + 
-				"(id, firstName, middleName, lastName, birthday, position) VALUES " +
-				"(?, ?, ?, ?, ?, ?);";
+				"(firstName, middleName, lastName, birthday, position) VALUES " +
+				"(?, ?, ?, ?, ?);";
 		
 		int result = 0;
 		
-		Class.forName("come.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		
 		try (Connection connection = DriverManager.getConnection(
-			"jdbc:mysql://localhost:3306/mysql_database?useSSL=false", "root", "password");
+			"jdbc:mysql://localhost:3306/java_case_study?useSSL=false", "application", "JavaCaseStudy1");
 				
 			PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
-			preparedStatement.setInt(1, 1);
-			preparedStatement.setString(2, employee.getFirstName());
-			preparedStatement.setString(3, employee.getMiddleName());
-			preparedStatement.setString(4, employee.getLastName());
-			preparedStatement.setString(5, employee.getBirthday());
-			preparedStatement.setString(6, employee.getPosition());
+			preparedStatement.setString(1, employee.getFirstName());
+			preparedStatement.setString(2, employee.getMiddleName());
+			preparedStatement.setString(3, employee.getLastName());
+			preparedStatement.setString(4, employee.getBirthday());
+			preparedStatement.setString(5, employee.getPosition());
 			
 			System.out.println(preparedStatement);
 			
