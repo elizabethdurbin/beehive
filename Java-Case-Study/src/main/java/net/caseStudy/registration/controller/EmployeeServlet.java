@@ -35,24 +35,25 @@ public class EmployeeServlet extends HttpServlet {
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost1(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost1(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String firstName = request.getParameter("firstName");
 		String middleName = request.getParameter("middleName");
 		String lastName = request.getParameter("lastName");
 		String birthday = request.getParameter("birthday");
 		String position = request.getParameter("position");
 		
-		Employee employee = new Employee();
-		employee.setFirstName(firstName);
-		employee.setMiddleName(middleName);
-		employee.setLastName(lastName);
-		employee.setBirthday(birthday);
-		employee.setPosition(position);
+		
+		Employee Employee = new Employee();
+		Employee.setFirstName(firstName);
+		Employee.setMiddleName(middleName);
+		Employee.setLastName(lastName);
+		Employee.setBirthday(birthday);
+		Employee.setPosition(position);
 		
 		try {
-			employeeDao.registerEmployee(employee);
+			employeeDao.registerEmployee(Employee);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -62,3 +63,8 @@ public class EmployeeServlet extends HttpServlet {
 	}
 
 }
+
+		
+			
+
+

@@ -40,19 +40,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 	</div>
 
 	<div class="w3-main">
-		<div class="w3-row w3-padding-64">
 		<div class="w3-twothird w3-container">
-			<h1 class="w3-text-blue">Add New Employee</h1>
-			<form action="<%= request.getContextPath() %>/register" method="post">
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="First Name" required name="firstName"></p>
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Middle Name" required name="middleName"></p>
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Last Name" required name="lastName"></p>
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Birthday" required name="birthday"></p>
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Position" required name="position"></p>
+			<h1>Add Compensation</h1>
+			<form action="<%= request.getContextPath() %>/compensation" method="post">
+		     <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="type"></p>
+		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="amount"></p>
+		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="description"></p>
+		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="date"></p>
 		    
 		      <p><button class="w3-button w3-light-grey w3-section" type="submit">Submit</button></p>
 		    </form>
-	    </div>
+		  
 	    </div>
     </div>
 </body>
