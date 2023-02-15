@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
-
 html,body,h1,h2,h3,h4,h5,h6 {
 font-family: "Roboto", sans-serif;
 }
@@ -34,23 +33,18 @@ article {
   padding: 20px;
   width: 33%;
   background-color: #f1f1f1;
-  height: 300px;
+  height: auto;
   text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #777;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.appArticle{
-  float: left;
-  padding: 20px;
-  background-color: #f1f1f1;
-  height: 300px;
+article:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-.actionArticle{
-  float: left;
-  padding: 20px;
-  background-color: #f1f1f1;
-  height: 300px;
-}
 footer{
   background-color: #777;
   padding: 10px;
@@ -86,7 +80,7 @@ footer{
   
   <h4 class="w3-bar-item"><b>Menu</b></h4>
   <a href="register" class="w3-bar-item w3-button w3-hover-black">Add Employee</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Employee Profile</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Directory</a>
   <a href="#" class="w3-bar-item w3-button w3-hover-black">Compensation</a>
   
 </div>
@@ -96,32 +90,27 @@ footer{
 <div class="w3-container">
 	  <h1 class="w3-text-blue">Welcome to the HR System</h1>
 	  
-	<article id="appArticle"> 
+	<article> 
 	  <h3 class="w3-text-blue">Shortcuts</h3>
 	  <a href="http://localhost:8080/Java-Case-Study/register">
-	  	<img src="images/form.png" alt="form" style="width:100px;height:125px;">
+	  	<img src="images/form.png" alt="form" style="max-width:20%;height:auto;">
 	  </a>
 	  <a href="#">
-	  	<img src="images/profile.png" alt="profile" style="width:200px;height:125px;">
+	  	<img src="images/profile.png" alt="profile" style="max-width:25%;height:auto;">
 	  </a>
-       <a href="#">
-	  	<img src="images/compensation.png" alt="compensation" style="width:110px;height:125px;">
+      <a href="#">
+	  	<img src="images/compensation.png" alt="compensation" style="max-width:20%;height:auto;">
 	  </a>
     </article>  
     
-    <article id="actionArticle">
+    <article>
     	<h3 class="w3-text-blue">Inbox</h3>
     	<p>You're all caught up on your inbox items.</p>
     </article> 
     
-    <article id="">
+    <article>
     	<h3 class="w3-text-blue">Previously viewed</h3>
-    	  <a href="#">
-    	  	<img src="images/zach.jpg" alt="zachProfile" style="width:110px;height:125px;">
-    	  </a>
-    	  <a href="#">
-    	  	<img src="images/elizabeth.jpg" alt="elizabethProfile" style="width:125px;height:125px;">
-    	  </a>
+    	  <p>No recent views</p>
     </article>
      
     <footer id="myFooter">
@@ -132,7 +121,7 @@ footer{
     	</div>
     </footer>
 </div>
-</div>
+
       
   
 
