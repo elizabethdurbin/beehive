@@ -80,7 +80,7 @@ footer{
   
   <h4 class="w3-bar-item"><b>Menu</b></h4>
   <a href="register" class="w3-bar-item w3-button w3-hover-black">Add Employee</a>
-  <a href="viewEmployees" class="w3-bar-item w3-button w3-hover-black">Directory</a>
+  <a href="viewEmployees" class="w3-bar-item w3-button w3-hover-black">Employee Directory</a>
   <a href="#" class="w3-bar-item w3-button w3-hover-black">Compensation</a>
   
 </div>
