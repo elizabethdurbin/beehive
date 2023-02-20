@@ -37,7 +37,7 @@ public class EmployeeServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost1(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost1(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String firstName = request.getParameter("firstName");
 		String middleName = request.getParameter("middleName");
 		String lastName = request.getParameter("lastName");

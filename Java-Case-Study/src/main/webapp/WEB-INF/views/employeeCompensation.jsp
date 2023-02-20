@@ -48,10 +48,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="description"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="text" required name="date"></p>
 		    
-		      <p><button class="w3-button w3-light-grey w3-section" type="submit">Submit</button></p>
+		      <p><button onclick="myFunction()" class="w3-button w3-light-grey w3-section" type="submit">Submit</button></p>
 		    </form>
 		  
 	    </div>
     </div>
+    
+<script>
+function myFunction() {
+	alert("text here");
+}
+</script>    
+    
 </body>
 </html>
