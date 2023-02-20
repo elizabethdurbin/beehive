@@ -30,14 +30,19 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 	    <div class="w3-bar-item w3-theme-l1">HR System</div>
 	    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 	    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Home</a>
-	    <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Employee</a>
+		
+		<form class="example" action="example.jsp">
+  			<input type="text" placeholder="Search.." name="search">
+  			<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
 	
 	  </div>
 	</div>
 
 	<div class="w3-main">
+		<div class="w3-row w3-padding-64">
 		<div class="w3-twothird w3-container">
-			<h1>Add New Employee</h1>
+			<h1 class="w3-text-blue">Add New Employee</h1>
 			<form action="<%= request.getContextPath() %>/register" method="post">
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="First Name" required name="firstName"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Middle Name" required name="middleName"></p>
@@ -47,6 +52,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 		    
 		      <p><button class="w3-button w3-light-grey w3-section" type="submit">Submit</button></p>
 		    </form>
+	    </div>
 	    </div>
     </div>
 </body>

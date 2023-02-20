@@ -27,8 +27,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-bar-item w3-theme-l1">HR System</div>
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-theme-l1">Home</a>
-    <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Employee</a>
-
+    
+  	
+  	<form class="example" action="example.jsp">
+  		<input type="text" placeholder="Search.." name="search">
+  		<button type="submit"><i class="fa fa-search"></i></button>
+	</form>
+	
   </div>
 </div>
 
@@ -37,11 +42,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
     <i class="fa fa-remove"></i>
   </a>
+  
+ 
+  
   <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a href="register" class="w3-bar-item w3-button w3-hide-small w3-hover-black">Add Employee</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Employee Profile</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-black">Compensation</a>
+  
+ 
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -52,7 +61,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
+      <h1 class="w3-text-blue">Welcome</h1>
       <p> Content Here</p>
     </div>
     <div class="w3-third w3-container">
@@ -62,7 +71,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <footer id="myFooter">
     <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>Footer</h4>
+      <h3>Contact Us</h3> 
+      <h4>Phone: 888-456-HELP</h4>
+      <h4>Email: support@hrsystem.com</h4>
     </div>
   </footer>
 
