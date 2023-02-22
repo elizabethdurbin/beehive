@@ -22,6 +22,23 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   height: inherit;
 }
 
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+  height: auto;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #777;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+article:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
 footer{
   background-color: #777;
   padding: 10px;
@@ -76,14 +93,11 @@ footer{
   			<input type="text" placeholder="Search.." name="search">
   			<button type="submit"><i class="fa fa-search"></i></button>
 	</form>
-     
-    <footer id="myFooter">
-   		<div class="w3-container w3-theme-l2">
-      		<h3>Contact Us</h3> 
-      		<h4>Phone: 888-456-HELP</h4>
-      		<h4>Email: support@hrsystem.com</h4>
-    	</div>
-    </footer>
+	
+	<article>
+		<p>Search results appear here...</p>
+	</article>
+    
 </div>
 
 <script>

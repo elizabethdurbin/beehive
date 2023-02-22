@@ -41,7 +41,7 @@ public class EmployeeListServlet extends HttpServlet {
 		try {
 			List<Employee> allEmployees = employeeListDao.getAllEmployees();
 			
-			//Here it will loop through all the employee ojects of the db and you can access the data from
+			//Here it will loop through all the employee objects of the db and you can access the data from
 			//these objects as seen below in the print statements
 			for (int i=0; i<allEmployees.size(); i++) {
 				System.out.println(allEmployees.get(i).getId());
