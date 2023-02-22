@@ -35,9 +35,6 @@ article {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-article:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
 
 footer{
   background-color: #777;
@@ -90,12 +87,13 @@ footer{
 	<h1 class="w3-text-blue w3-padding-64">Employee Directory</h1>
 	  
 	<form class="example" action="example.jsp">
-  			<input type="text" placeholder="Search.." name="search">
+  			<input type="text" placeholder="Search Employee Directory" name="search">
   			<button type="submit"><i class="fa fa-search"></i></button>
 	</form>
 	
 	<article>
-		<p>Search results appear here...</p>
+		<h3>Search Results</h3>
+		
 	</article>
     
 </div>
