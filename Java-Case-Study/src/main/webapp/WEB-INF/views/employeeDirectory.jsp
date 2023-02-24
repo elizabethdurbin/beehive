@@ -91,10 +91,7 @@ footer{
   			<button type="submit"><i class="fa fa-search"></i></button>
 	</form>
 	
-	<article>
-		<h3>Search Results</h3>
-		
-	</article>
+	
     
 </div>
 

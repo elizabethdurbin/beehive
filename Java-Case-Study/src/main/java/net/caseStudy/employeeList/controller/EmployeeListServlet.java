@@ -1,17 +1,18 @@
 package net.caseStudy.employeeList.controller;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import net.caseStudy.employeeList.dao.EmployeeListDao;
-import net.caseStudy.employeeList.model.EmployeeList;
 import net.caseStudy.registration.model.Employee;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.util.List;
 
 
@@ -64,20 +65,6 @@ public class EmployeeListServlet extends HttpServlet {
         		+ "  bottom: 0;\r\n"
         		+ "  height: inherit;\r\n"
         		+ "}\r\n"
-        		+ "\r\n"
-        		+ "article {\r\n"
-        		+ "  float: left;\r\n"
-        		+ "  padding: 20px;\r\n"
-        		+ "  width: 100%;\r\n"
-        		+ "  background-color: #f1f1f1;\r\n"
-        		+ "  height: auto;\r\n"
-        		+ "  text-align: center;\r\n"
-        		+ "  border-width: 2px;\r\n"
-        		+ "  border-style: solid;\r\n"
-        		+ "  border-color: #777;\r\n"
-        		+ "  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\r\n"
-        		+ "}\r\n"
-        		+ "\r\n"
         		+ "\r\n"
         		+ "footer{\r\n"
         		+ "  background-color: #777;\r\n"
@@ -134,11 +121,6 @@ public class EmployeeListServlet extends HttpServlet {
         		+ "  			<button type=\"submit\"><i class=\"fa fa-search\"></i></button>\r\n"
         		+ "	</form>\r\n"
         		+ "	\r\n"
-        		+ "	<article>\r\n"
-        		+ "		<h3>Search Results</h3>\r\n"
-        		+ "		\r\n"
-        		+ "	</article>\r\n"
-        		+ "    \r\n"
         		+ "</div>\r\n"
         		+ "\r\n"
         		+ "<script>\r\n"
@@ -170,20 +152,26 @@ public class EmployeeListServlet extends HttpServlet {
 			//Here it will loop through all the employee objects of the db and you can access the data from
 			//these objects as seen below in the print statements
 			for (int i=0; i<allEmployees.size(); i++) {
-				out.println("<div>" + allEmployees.get(i).getId() + "</div>");
+				out.println("<table border=1 width=10% height=10%>");
+				out.println("<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Birthday</th><th>Position</th><tr>"); 
+				
+				out.println(allEmployees.get(i).getId());
 				out.println(allEmployees.get(i).getFirstName());
 				out.println(allEmployees.get(i).getLastName());
 				out.println(allEmployees.get(i).getBirthday());
 				out.println(allEmployees.get(i).getPosition());
 
-			}
 			
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+
+			out.println("</table>");
+			out.println("</html></body>");
+			
+		} 
+		}
+		catch (Exception e) {
+			out.println("error");
 		}
 		
-        out.println("</body>\r\n");
-        out.println("</html>");
         
 		
 	}
