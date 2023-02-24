@@ -11,6 +11,7 @@ import net.caseStudy.employeeList.model.EmployeeList;
 import net.caseStudy.registration.model.Employee;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 
@@ -32,9 +33,134 @@ public class EmployeeListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeeDirectory.jsp");
-		dispatcher.forward(request, response);
+//		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeeDirectory.jsp");
+//		dispatcher.forward(request, response);
 		
+
+		
+		
+        PrintWriter out = response.getWriter();  
+        response.setContentType("text/html"); 
+        out.println("<%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\"\r\n"
+        		+ "    pageEncoding=\"UTF-8\"%>\r\n"
+        		+ "<!DOCTYPE html>\r\n"
+        		+ "<html>\r\n"
+        		+ "<head>\r\n"
+        		+ "<meta charset=\"UTF-8\">\r\n"
+        		+ "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n"
+        		+ "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\r\n"
+        		+ "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/lib/w3-theme-black.css\">\r\n"
+        		+ "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto\">\r\n"
+        		+ "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n"
+        		+ "\r\n"
+        		+ "<title>Directory</title>\r\n"
+        		+ "\r\n"
+        		+ "<style>\r\n"
+        		+ "html,body,h1,h2,h3,h4,h5,h6 {font-family: \"Roboto\", sans-serif;}\r\n"
+        		+ ".w3-sidebar {\r\n"
+        		+ "  z-index: 3;\r\n"
+        		+ "  width: 250px;\r\n"
+        		+ "  top: 43px;\r\n"
+        		+ "  bottom: 0;\r\n"
+        		+ "  height: inherit;\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+ "article {\r\n"
+        		+ "  float: left;\r\n"
+        		+ "  padding: 20px;\r\n"
+        		+ "  width: 100%;\r\n"
+        		+ "  background-color: #f1f1f1;\r\n"
+        		+ "  height: auto;\r\n"
+        		+ "  text-align: center;\r\n"
+        		+ "  border-width: 2px;\r\n"
+        		+ "  border-style: solid;\r\n"
+        		+ "  border-color: #777;\r\n"
+        		+ "  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+ "\r\n"
+        		+ "footer{\r\n"
+        		+ "  background-color: #777;\r\n"
+        		+ "  padding: 10px;\r\n"
+        		+ "  text-align: center;\r\n"
+        		+ "  color: white;\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+ "</style>\r\n"
+        		+ "\r\n"
+        		+ "</head>\r\n"
+        		+ "<body>\r\n"
+        		+ "\r\n"
+        		+ "<div class=\"w3-top\">\r\n"
+        		+ "	  <div class=\"w3-bar w3-theme w3-top w3-left-align w3-large\">\r\n"
+        		+ "	    <div class=\"w3-bar-item w3-theme-l1\">HR System</div>\r\n"
+        		+ "	    <a class=\"w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1\" href=\"javascript:void(0)\" onclick=\"w3_open()\"><i class=\"fa fa-bars\"></i></a>\r\n"
+        		+ "	    <a href=\"http://localhost:8080/Java-Case-Study/\" class=\"w3-bar-item w3-button w3-theme-l1\">Home</a>\r\n"
+        		+ "		\r\n"
+        		+ "		\r\n"
+        		+ "	\r\n"
+        		+ "	  </div>\r\n"
+        		+ "</div>\r\n"
+        		+ "\r\n"
+        		+ "<!-- Navbar -->\r\n"
+        		+ "<div class=\"w3-top\">\r\n"
+        		+ "  <div class=\"w3-bar w3-theme w3-top w3-left-align w3-large\">\r\n"
+        		+ "    <button id=\"openNav\" class=\"w3-button w3-black w3-xlarge w3-bar-item\" onclick=\"w3_open()\">&#9776;</button>\r\n"
+        		+ "  	<img src=\"images/logo.png\" class=\"w3-top\" style=\"width:60px;height:auto;\">\r\n"
+        		+ "    <a class=\"w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large w3-theme-l1\" href=\"javascript:void(0)\" onclick=\"w3_open()\"><i class=\"fa fa-bars\"></i></a>\r\n"
+        		+ "    <a href=\"http://localhost:8080/Java-Case-Study/\" class=\"w3-bar-item w3-button w3-theme-l1\">Home</a>\r\n"
+        		+ "	\r\n"
+        		+ "  </div>\r\n"
+        		+ "</div>\r\n"
+        		+ "\r\n"
+        		+ "<!-- Sidebar -->\r\n"
+        		+ "<div class=\"w3-sidebar w3-bar-block w3-card w3-animate-left\" style=\"display:none\" id=\"mySidebar\">\r\n"
+        		+ "  <button class=\"w3-bar-item w3-button w3-large\"\r\n"
+        		+ "  onclick=\"w3_close()\">Close &times;</button>\r\n"
+        		+ "  \r\n"
+        		+ "  <h4 class=\"w3-bar-item\"><b>Menu</b></h4>\r\n"
+        		+ "  <a href=\"register\" class=\"w3-bar-item w3-button w3-hover-black\">Register Employee</a>\r\n"
+        		+ "  <a href=\"viewEmployees\" class=\"w3-bar-item w3-button w3-hover-black\">Employee Directory</a>\r\n"
+        		+ "  <a href=\"#\" class=\"w3-bar-item w3-button w3-hover-black\">Compensation</a>\r\n"
+        		+ "  \r\n"
+        		+ "</div>\r\n"
+        		+ "\r\n"
+        		+ "<!-- Main content -->\r\n"
+        		+ "<div class=\"w3-container\">\r\n"
+        		+ "	<h1 class=\"w3-text-blue w3-padding-64\">Employee Directory</h1>\r\n"
+        		+ "	  \r\n"
+        		+ "	<form class=\"example\" action=\"example.jsp\">\r\n"
+        		+ "  			<input type=\"text\" placeholder=\"Search Employee Directory\" name=\"search\">\r\n"
+        		+ "  			<button type=\"submit\"><i class=\"fa fa-search\"></i></button>\r\n"
+        		+ "	</form>\r\n"
+        		+ "	\r\n"
+        		+ "	<article>\r\n"
+        		+ "		<h3>Search Results</h3>\r\n"
+        		+ "		\r\n"
+        		+ "	</article>\r\n"
+        		+ "    \r\n"
+        		+ "</div>\r\n"
+        		+ "\r\n"
+        		+ "<script>\r\n"
+        		+ "function myFunction() {\r\n"
+        		+ "	alert(\"text here\");\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+ "var mySidebar = document.getElementById(\"mySidebar\");\r\n"
+        		+ "\r\n"
+        		+ "\r\n"
+        		+ "// Toggle between showing and hiding the sidebar\r\n"
+        		+ "function w3_open() {\r\n"
+        		+ "  document.getElementById(\"mySidebar\").style.display = \"block\";\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+ "// Close the sidebar with the close button\r\n"
+        		+ "function w3_close() {\r\n"
+        		+ "  document.getElementById(\"mySidebar\").style.display = \"none\";\r\n"
+        		+ "}\r\n"
+        		+ "</script>     \r\n"
+        		+ "\r\n");
+        
 		//This is where the app calls the get all employees, this will call when the page switches to 
 		//the viewEmployees route (employeeDirectory.jsp) as seen above
 		//You can check the Console in Eclipse to see the output from this file
@@ -44,17 +170,21 @@ public class EmployeeListServlet extends HttpServlet {
 			//Here it will loop through all the employee objects of the db and you can access the data from
 			//these objects as seen below in the print statements
 			for (int i=0; i<allEmployees.size(); i++) {
-				System.out.println(allEmployees.get(i).getId());
-				System.out.println(allEmployees.get(i).getFirstName());
-				System.out.println(allEmployees.get(i).getLastName());
-				System.out.println(allEmployees.get(i).getBirthday());
-				System.out.println(allEmployees.get(i).getPosition());
+				out.println("<div>" + allEmployees.get(i).getId() + "</div>");
+				out.println(allEmployees.get(i).getFirstName());
+				out.println(allEmployees.get(i).getLastName());
+				out.println(allEmployees.get(i).getBirthday());
+				out.println(allEmployees.get(i).getPosition());
 
 			}
 			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
+		
+        out.println("</body>\r\n");
+        out.println("</html>");
+        
 		
 	}
 
