@@ -10,6 +10,7 @@ import net.caseStudy.registration.dao.EmployeeDao;
 import net.caseStudy.registration.model.Employee;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 
 @WebServlet("/register")
@@ -52,8 +53,12 @@ public class EmployeeServlet extends HttpServlet {
 		Employee.setBirthday(birthday);
 		Employee.setPosition(position);
 		
+
+		
 		try {
 			employeeDao.registerEmployee(Employee);
+
+			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}

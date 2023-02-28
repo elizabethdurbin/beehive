@@ -148,29 +148,33 @@ public class EmployeeListServlet extends HttpServlet {
 		//You can check the Console in Eclipse to see the output from this file
 		try {
 			List<Employee> allEmployees = employeeListDao.getAllEmployees();
+			out.println("<table border=1 width=auto height=10% >");
+			out.println("<tr>" +
+						"<th>ID</th>" + 
+						"<th>First Name</th>" +
+						"<th>Last Name</th>" +
+						"<th>Birthday</th>" +
+						"<th>Position</th>" +
+						" </tr>");
 			
 			//Here it will loop through all the employee objects of the db and you can access the data from
 			//these objects as seen below in the print statements
 			for (int i=0; i<allEmployees.size(); i++) {
-				out.println("<table border=1 width=10% height=10%>");
-				out.println("<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Birthday</th><th>Position</th><tr>"); 
-				
-				out.println(allEmployees.get(i).getId());
-				out.println(allEmployees.get(i).getFirstName());
-				out.println(allEmployees.get(i).getLastName());
-				out.println(allEmployees.get(i).getBirthday());
-				out.println(allEmployees.get(i).getPosition());
-
-			
-
+				out.println("" +
+				"<tr>" +
+				"<td>" + allEmployees.get(i).getId() + "</td>" +
+				"<td>" + allEmployees.get(i).getFirstName() + "</td>" + 
+				"<td>" + allEmployees.get(i).getLastName() + "</td>" + 
+				"<td>" + allEmployees.get(i).getBirthday() + "</td>" + 
+				"<td>" + allEmployees.get(i).getPosition() + "</td>" + 
+				"</tr>");
+			} 
 			out.println("</table>");
-			out.println("</html></body>");
-			
-		} 
 		}
 		catch (Exception e) {
-			out.println("error");
+			out.println("SYSTEM ERROR");
 		}
+		out.println("</html></body>");
 		
         
 		
