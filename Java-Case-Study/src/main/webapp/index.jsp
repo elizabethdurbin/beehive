@@ -81,7 +81,6 @@ footer{
   <h4 class="w3-bar-item"><b>Menu</b></h4>
   <a href="register" class="w3-bar-item w3-button w3-hover-black">Register Employee</a>
   <a href="viewEmployees" class="w3-bar-item w3-button w3-hover-black">Employee Directory</a>
-  <a href="#" class="w3-bar-item w3-button w3-hover-black">Compensation</a>
   
 </div>
 
@@ -95,11 +94,8 @@ footer{
 	  <a href="http://localhost:8080/Java-Case-Study/register">
 	  	<img src="images/form.png" alt="form" style="max-width:20%;height:auto;">
 	  </a>
-	  <a href="#">
+	  <a href="http://localhost:8080/Java-Case-Study/viewEmployees">
 	  	<img src="images/profile.png" alt="profile" style="max-width:25%;height:auto;">
-	  </a>
-      <a href="#">
-	  	<img src="images/compensation.png" alt="compensation" style="max-width:20%;height:auto;">
 	  </a>
     </article>  
     
@@ -109,8 +105,8 @@ footer{
     </article> 
     
     <article>
-    	<h3 class="w3-text-blue">Previously viewed</h3>
-    	  <p>No recent views</p>
+    	<h3 class="w3-text-blue">News</h3>
+    	  <p>No recent news</p>
     </article>
      
     <footer id="myFooter">

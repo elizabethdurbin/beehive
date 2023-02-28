@@ -46,7 +46,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <h4 class="w3-bar-item"><b>Menu</b></h4>
   <a href="register" class="w3-bar-item w3-button w3-hover-black">Register Employee</a>
   <a href="viewEmployees" class="w3-bar-item w3-button w3-hover-black">Employee Directory</a>
-  <a href="#" class="w3-bar-item w3-button w3-hover-black">Compensation</a>
   
 </div>
 
@@ -61,6 +60,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Last Name" required name="lastName"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Birthday" required name="birthday"></p>
 		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Position" required name="position"></p>
+		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Compensation Type" required name="compensationType"></p>
+		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Compensation Amount" required name="compensationAmount"></p>
+		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Description" required name="description"></p>
+		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Pay Date" required name="payDate"></p>
 		    
 		      <p><button class="w3-button w3-light-grey w3-section" type="submit">Submit</button></p>
 		      		

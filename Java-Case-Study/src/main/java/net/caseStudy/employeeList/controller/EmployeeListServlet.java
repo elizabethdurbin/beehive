@@ -10,9 +10,6 @@ import net.caseStudy.registration.model.Employee;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.util.List;
 
 
@@ -73,6 +70,14 @@ public class EmployeeListServlet extends HttpServlet {
         		+ "  color: white;\r\n"
         		+ "}\r\n"
         		+ "\r\n"
+        		+"table, th, td { \r\n"
+        		+"	  border: 1px solid black; \r\n"
+        		+"border-collapse: collapse; \r\n"
+        		+"	} \r\n"
+        		+"tr:nth-child(even){ \r\n"
+        		+"	background-color: #cbd1d4 \r\n"
+        		+"} \r\n"
+        		+"tr:hover{background-color: #e6f2ff; \r\n"
         		+ "</style>\r\n"
         		+ "\r\n"
         		+ "</head>\r\n"
@@ -108,7 +113,6 @@ public class EmployeeListServlet extends HttpServlet {
         		+ "  <h4 class=\"w3-bar-item\"><b>Menu</b></h4>\r\n"
         		+ "  <a href=\"register\" class=\"w3-bar-item w3-button w3-hover-black\">Register Employee</a>\r\n"
         		+ "  <a href=\"viewEmployees\" class=\"w3-bar-item w3-button w3-hover-black\">Employee Directory</a>\r\n"
-        		+ "  <a href=\"#\" class=\"w3-bar-item w3-button w3-hover-black\">Compensation</a>\r\n"
         		+ "  \r\n"
         		+ "</div>\r\n"
         		+ "\r\n"
@@ -148,7 +152,7 @@ public class EmployeeListServlet extends HttpServlet {
 		//You can check the Console in Eclipse to see the output from this file
 		try {
 			List<Employee> allEmployees = employeeListDao.getAllEmployees();
-			out.println("<table border=1 width=auto height=10% >");
+			out.println("<font face=\"IBM Plex Sans\" size=\"12\"><table border=1 width=75% height=10% >");
 			out.println("<tr>" +
 						"<th>ID</th>" + 
 						"<th>First Name</th>" +
