@@ -10,8 +10,8 @@ public class EmployeeDao {
 	
 	public int registerEmployee(Employee employee) throws ClassNotFoundException {
 		String INSERT_USERS_SQL = "INSERT INTO employee" + 
-				"(firstName, middleName, lastName, birthday, position) VALUES " +
-				"(?, ?, ?, ?, ?);";
+				"(firstName, middleName, lastName, birthday, position, compensationType, compensationAmount, compensationDescription, compensationDate) VALUES " +
+				"(?, ?, ?, ?, ?, ?, ?, ?, ?);";
 		
 		int result = 0;
 		
@@ -26,6 +26,11 @@ public class EmployeeDao {
 			preparedStatement.setString(3, employee.getLastName());
 			preparedStatement.setString(4, employee.getBirthday());
 			preparedStatement.setString(5, employee.getPosition());
+			preparedStatement.setString(6, employee.getCompensationType());
+			preparedStatement.setString(7, employee.getCompensationAmount());
+			preparedStatement.setString(8, employee.getCompensationDescription());
+			preparedStatement.setString(9, employee.getCompensationDate());
+
 			
 			System.out.println(preparedStatement);
 			

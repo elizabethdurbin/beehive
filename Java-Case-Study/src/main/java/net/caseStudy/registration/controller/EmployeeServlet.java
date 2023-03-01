@@ -44,6 +44,11 @@ public class EmployeeServlet extends HttpServlet {
 		String lastName = request.getParameter("lastName");
 		String birthday = request.getParameter("birthday");
 		String position = request.getParameter("position");
+		String compensationType = request.getParameter("compensationType");
+		String compensationAmount = request.getParameter("compensationAmount");
+		String compensationDescription = request.getParameter("compensationDescription");
+		String compensationDate = request.getParameter("compensationDate");
+
 		
 		
 		Employee Employee = new Employee();
@@ -52,6 +57,11 @@ public class EmployeeServlet extends HttpServlet {
 		Employee.setLastName(lastName);
 		Employee.setBirthday(birthday);
 		Employee.setPosition(position);
+		Employee.setCompensationType(compensationType);
+		Employee.setCompensationAmount(compensationAmount);
+		Employee.setCompensationDescription(compensationDescription);
+		Employee.setCompensationDate(compensationDate);
+
 		
 
 		

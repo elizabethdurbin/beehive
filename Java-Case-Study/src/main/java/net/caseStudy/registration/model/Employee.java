@@ -7,7 +7,35 @@ public class Employee {
 	private String lastName;
 	private String birthday;
 	private String position;
+	private String compensationType;
+	private String compensationAmount;
+	private String compensationDescription;
+	private String compensationDate;
 	
+	public String getCompensationType() {
+		return compensationType;
+	}
+	public void setCompensationType(String compensationType) {
+		this.compensationType = compensationType;
+	}
+	public String getCompensationAmount() {
+		return compensationAmount;
+	}
+	public void setCompensationAmount(String compensationAmount) {
+		this.compensationAmount = compensationAmount;
+	}
+	public String getCompensationDescription() {
+		return compensationDescription;
+	}
+	public void setCompensationDescription(String compensationDescription) {
+		this.compensationDescription = compensationDescription;
+	}
+	public String getCompensationDate() {
+		return compensationDate;
+	}
+	public void setCompensationDate(String compensationDate) {
+		this.compensationDate = compensationDate;
+	}
 	public int getId() {
 		return id;
 	}

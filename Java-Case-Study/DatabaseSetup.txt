@@ -1,12 +1,12 @@
 //Follow the following commands in your local my sql database to create the database that the app is referencing
 
-// Create Database
+
 
 create database java_case_study;
 
 
 
-// Create Employee Table
+
 create table EMPLOYEE
 (
 id int not null auto_increment,
@@ -17,5 +17,29 @@ birthday varchar(30) not null,
 position varchar(40) not null,
 primary key (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+
+ALTER TABLE employee
+ADD COLUMN compensationType VARCHAR(50) AFTER position;
+
+
+
+
+ALTER TABLE employee
+ADD COLUMN compensationAmount INT AFTER compensationType;
+
+
+
+
+ALTER TABLE employee
+ADD COLUMN compensationDescription TEXT AFTER compensationAmount;
+
+
+
+
+ALTER TABLE employee
+ADD COLUMN compensationDate VARCHAR(5) AFTER compensationDescription;
 
 
