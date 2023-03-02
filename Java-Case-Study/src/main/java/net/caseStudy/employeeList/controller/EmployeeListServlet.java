@@ -159,6 +159,11 @@ public class EmployeeListServlet extends HttpServlet {
 						"<th>Last Name</th>" +
 						"<th>Birthday</th>" +
 						"<th>Position</th>" +
+						"<th>Compensation Type</th>" +
+						"<th>Compensation Amount</th>" +
+						"<th>Compensation Description</th>" +
+						"<th>Compensation Date</th>" +
+
 						" </tr>");
 			
 			//Here it will loop through all the employee objects of the db and you can access the data from
@@ -171,6 +176,10 @@ public class EmployeeListServlet extends HttpServlet {
 				"<td>" + allEmployees.get(i).getLastName() + "</td>" + 
 				"<td>" + allEmployees.get(i).getBirthday() + "</td>" + 
 				"<td>" + allEmployees.get(i).getPosition() + "</td>" + 
+				"<td>" + allEmployees.get(i).getCompensationType() + "</td>" + 
+				"<td>" + allEmployees.get(i).getCompensationAmount() + "</td>" + 
+				"<td>" + allEmployees.get(i).getCompensationDescription() + "</td>" + 
+				"<td>" + allEmployees.get(i).getCompensationDate() + "</td>" + 
 				"</tr>");
 			} 
 			out.println("</table>");

@@ -37,6 +37,11 @@ public class EmployeeListDao {
 				String lastName = rs.getString("lastName");
 				String birthday = rs.getString("birthday");
 				String position = rs.getString("position");
+				String compensationType = rs.getString("compensationType");
+				int compensationAmount = rs.getInt("compensationAmount");
+				String compensationDescription = rs.getString("compensationDescription");
+				String compensationDate = rs.getString("compensationDate");
+
 				
 				currentemployee = new Employee();
 				currentemployee.setId(id);
@@ -45,6 +50,10 @@ public class EmployeeListDao {
 				currentemployee.setLastName(lastName);
 				currentemployee.setBirthday(birthday);
 				currentemployee.setPosition(position);
+				currentemployee.setCompensationType(compensationType);
+				currentemployee.setCompensationAmount(compensationDate);
+				currentemployee.setCompensationDescription(compensationDescription);
+				currentemployee.setCompensationDate(compensationDate);
 				
 				employeeList.add(currentemployee);
 				
